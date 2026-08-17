@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Calla — Dari Naufal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Times New Roman", serif;
+    background:#f5f3ef;
+    color:#292725;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        radial-gradient(circle at 15% 20%,rgba(210,200,190,.25),transparent 30%),
+        radial-gradient(circle at 85% 75%,rgba(190,200,210,.25),transparent 30%),
+        #f5f3ef;
+}
+
+/* PEMBUKA */
+
+.opening{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+}
+
+.opening-box{
+    max-width:600px;
+    animation:fadeUp 1.4s ease;
+}
+
+.label{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:4px;
+    color:#888;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.opening h1{
+    font-size:46px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.opening p{
+    font-family:Arial,sans-serif;
+    color:#777;
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    border:1px solid #292725;
+    background:transparent;
+    padding:14px 30px;
+    border-radius:30px;
+    color:#292725;
+    font-size:13px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#292725;
+    color:white;
+}
+
+/* PESAN */
+
+.letter{
+    max-width:720px;
+    margin:auto;
+    padding:80px 25px 120px;
+}
+
+.date{
+    font-family:Arial,sans-serif;
+    color:#999;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:45px;
+}
+
+.letter h2{
+    font-size:34px;
+    font-weight:400;
+    margin-bottom:40px;
+}
+
+.text{
+    font-size:18px;
+    line-height:2;
+    color:#3c3936;
+}
+
+.text p{
+    margin-bottom:28px;
+}
+
+.quote{
+    margin:50px 0;
+    padding:25px 0 25px 25px;
+    border-left:2px solid #777;
+    color:#666;
+    font-size:20px;
+    font-style:italic;
+    line-height:1.7;
+}
+
+.signature{
+    margin-top:70px;
+    text-align:right;
+    color:#777;
+}
+
+.signature strong{
+    display:block;
+    margin-top:10px;
+    font-size:26px;
+    font-weight:400;
+    color:#292725;
+}
+
+/* MUSIK */
+
+.music{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:20;
+}
+
+.music button{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#292725;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    box-shadow:0 5px 20px rgba(0,0,0,.18);
+}
+
+/* ANIMASI */
+
+.star{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    opacity:.35;
+    animation:floatUp linear forwards;
+    z-index:0;
+    font-family:Arial,sans-serif;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.35;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(180deg);
+        opacity:0;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .opening h1{
+        font-size:38px;
+    }
+
+    .letter{
+        padding:65px 22px 100px;
+    }
+
+    .letter h2{
+        font-size:29px;
+    }
+
+    .text{
+        font-size:17px;
+        line-height:1.9;
+    }
+
+    .quote{
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- =========================
+     PEMBUKA
+========================= -->
+
+<section class="opening">
+
+    <div class="opening-box">
+
+        <div class="label">
+            Sebuah pesan sederhana
+        </div>
+
+        <h1>Untuk Calla</h1>
+
+        <p>
+            Bukan tentang masa lalu atau sesuatu yang harus kembali.
+            Hanya tentang menghargai seseorang yang pernah menjadi
+            bagian dari perjalanan hidup.
+        </p>
+
+        <button class="btn" onclick="bukaPesan()">
+            Baca Pesan
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ISI PESAN
+========================= -->
+
+<section class="letter" id="pesan">
+
+    <div class="date">
+        17 AGUSTUS 2026
+    </div>
+
+    <h2>Untuk Calla, sebagai seorang teman.</h2>
+
+    <div class="text">
+
+        <p>
+            Calla, aku membuat pesan ini bukan karena ada sesuatu
+            yang ingin aku minta dari kamu. Aku cuma ingin menyampaikan
+            sesuatu yang mungkin lebih mudah ditulis daripada diucapkan
+            secara langsung.
+        </p>
+
+        <p>
+            Kita mungkin pernah melewati banyak hal bersama.
+            Ada percakapan yang panjang, cerita yang sederhana,
+            bercanda tentang hal-hal kecil, sampai momen-momen yang
+            mungkin sekarang sudah menjadi bagian dari masa lalu.
+        </p>
+
+        <p>
+            Seiring waktu, aku sadar bahwa tidak semua orang yang
+            pernah dekat dengan kita harus selalu berada di tempat
+            yang sama dalam hidup kita.
+        </p>
+
+        <p>
+            Kadang hubungan berubah, keadaan berubah, dan kita juga
+            ikut berubah. Menurutku itu bukan sesuatu yang harus
+            selalu disesali.
+        </p>
+
+        <div class="quote">
+            "Tidak semua hubungan harus memiliki cerita yang sama.
+            Ada yang cukup menjadi pertemanan yang tetap dihargai."
+        </div>
+
+        <p>
+            Aku menghargai Calla sebagai seseorang yang pernah
+            memberikan banyak warna dalam perjalanan hidupku.
+            Bukan karena masa lalu, bukan karena apa yang pernah terjadi,
+            tapi karena kamu adalah kamu.
+        </p>
+
+        <p>
+            Kalau selama ini aku pernah melakukan sesuatu yang membuat
+            kamu tidak nyaman, membuat kamu kecewa, atau mungkin ada
+            sikapku yang kurang baik, aku minta maaf.
+        </p>
+
+        <p>
+            Aku tidak ingin terus membawa kesalahan yang sudah lewat.
+            Lebih baik semuanya menjadi pelajaran supaya kita bisa
+            menjadi pribadi yang lebih baik ke depannya.
+        </p>
+
+        <p>
+            Aku juga tidak berharap kita harus selalu dekat seperti dulu.
+            Kalau sekarang kita hanya bisa menjadi teman, menurutku
+            itu juga bukan sesuatu yang buruk.
+        </p>
+
+        <p>
+            Justru menurutku, menjadi teman berarti kita bisa saling
+            menghargai tanpa harus memiliki tuntutan apa pun.
+        </p>
+
+        <p>
+            Kalau suatu hari Calla sedang membutuhkan seseorang untuk
+            sekadar ngobrol, semoga aku masih bisa menjadi teman yang
+            bisa diajak bicara dengan nyaman.
+        </p>
+
+        <p>
+            Begitu juga sebaliknya, aku akan tetap menghargai batasan
+            dan kehidupan Calla. Tidak semua hal harus aku ketahui,
+            dan tidak semua cerita harus aku ikut campuri.
+        </p>
+
+        <p>
+            Aku cuma berharap pertemanan yang ada sekarang bisa berjalan
+            dengan baik, tanpa membawa beban dari hal-hal yang sudah
+            terjadi sebelumnya.
+        </p>
+
+        <p>
+            Terima kasih untuk semua cerita yang pernah kita bagi.
+            Terima kasih juga karena pernah menjadi teman yang hadir
+            di beberapa bagian penting dalam hidupku.
+        </p>
+
+        <p>
+            Mungkin kita tidak akan selalu berbicara setiap hari.
+            Mungkin kita masing-masing akan memiliki kesibukan,
+            lingkungan, dan jalan hidup sendiri.
+        </p>
+
+        <p>
+            Tapi kalau suatu saat kita bertemu lagi setelah sekian lama,
+            semoga kita masih bisa saling menyapa tanpa rasa canggung
+            dan tanpa harus memikirkan masa lalu terlalu jauh.
+        </p>
+
+        <p>
+            Aku tidak ingin pesan ini terdengar berlebihan.
+            Aku cuma ingin mengatakan satu hal sederhana:
+            aku menghargai pertemanan kita.
+        </p>
+
+        <p>
+            Semoga Calla selalu baik-baik saja, dimudahkan dalam
+            menjalani apa pun yang sedang dikerjakan, dan dikelilingi
+            orang-orang yang benar-benar menghargai keberadaan Calla.
+        </p>
+
+        <p>
+            Tidak perlu membalas pesan ini dengan sesuatu yang panjang.
+            Cukup tahu bahwa dari sisi aku, tidak ada rasa marah
+            atau tuntutan apa pun.
+        </p>
+
+        <p>
+            Kita sudah sama-sama tumbuh.
+            Jadi mari kita jalani bagian hidup kita masing-masing
+            dengan lebih dewasa.
+        </p>
+
+        <p>
+            Tetap jadi Calla yang baik.
+            Dan semoga pertemanan kita bisa tetap menjadi sesuatu
+            yang sederhana, sehat, dan saling menghargai.
+        </p>
+
+    </div>
+
+    <div class="signature">
+
+        Salam baik,
+
+        <strong>Naufal</strong>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MUSIK
+========================= -->
+
+<div class="music">
+
+    <button id="musicBtn" onclick="toggleMusic()">
+        ♪
+    </button>
+
+</div>
+
+<audio id="music" loop>
+    <!--
+    Untuk menambahkan musik:
+    1. Taruh file MP3 satu folder dengan index.html.
+    2. Contoh nama file: lagu.mp3
+    3. Tambahkan:
+
+    <source src="lagu.mp3" type="audio/mpeg">
+    -->
+</audio>
+
+
+<script>
+
+/* BUKA PESAN */
+
+function bukaPesan(){
+
+    document.getElementById("pesan").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* MUSIK */
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+let playing = false;
+
+function toggleMusic(){
+
+    if(!playing){
+
+        music.play().catch(()=>{});
+
+        musicBtn.innerHTML = "Ⅱ";
+        playing = true;
+
+    }else{
+
+        music.pause();
+
+        musicBtn.innerHTML = "♪";
+        playing = false;
+
+    }
+
+}
+
+
+/* ANIMASI BINTANG KECIL */
+
+function createStar(){
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+    star.innerHTML = "✦";
+
+    star.style.left =
+        Math.random() * 100 + "vw";
+
+    star.style.fontSize =
+        (8 + Math.random() * 10) + "px";
+
+    star.style.animationDuration =
+        (6 + Math.random() * 5) + "s";
+
+    document.body.appendChild(star);
+
+    setTimeout(function(){
+
+        star.remove();
+
+    },11000);
+
+}
+
+setInterval(createStar,1400);
+
+</script>
+
+</body>
+</html>
